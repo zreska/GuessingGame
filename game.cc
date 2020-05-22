@@ -1,10 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <iostream>
 
@@ -14,6 +7,7 @@ int main()
 {
     int num1;
     int num2;
+    int guesses = 0;
     
     cout<<"Player 1 enter a number"<<endl;
     cin>>num1;
@@ -24,12 +18,18 @@ int main()
     while(num1){
         if(num1 < num2){
             cout<<"Player 2's number is higher than Player 1's.  Guess a number lower"<<endl;
+            guesses++;
+            cout<<"Total number of guesses is: "<<guesses<<endl;
             cin>>num2;
         }else if (num1 > num2){
             cout<<"Player 2's number is lower than Player 1's  Guess a number higher"<<endl;
+            guesses++;
+            cout<<"Total number of guesses is: "<<guesses<<endl;
             cin>>num2;
         }else if(num1 == num2) {
             cout<<"You guessed the correct number!"<<endl;
+            guesses++;
+            cout<<"Total number of guesses is: "<<guesses<<endl;
             break;
         }
     }
